@@ -1,0 +1,17 @@
+"============================================================================
+" Cygwin 用の設定
+"============================================================================
+" ターミナル名
+"set term=cygwin
+set term=teraterm
+
+" 編集中ファイルのあるディレクトリでExplorerを開く
+command -nargs=0 Exp :!explorer `cygpath -w %:p:h`<CR>
+
+" TortoiseSVN 起動用設定
+command! -nargs=0 Tlog :!cygstart /cygdrive/c/Progra~1/TortoiseSVN/bin/TortoiseProc.exe /command:log /path:`cygpath -aw "%:p"` /closeonend<CR>
+command! -nargs=0 Tdiff :!cygstart /cygdrive/c/Progra~1/TortoiseSVN/bin/TortoiseProc.exe /command:diff /path:`cygpath -aw "%:p"` /closeonend<CR>
+command! -nargs=0 Tchk :!cygstart /cygdrive/c/Progra~1/TortoiseSVN/bin/TortoiseProc.exe /command:repostatus /path:`cygpath -aw "%:p"` /closeonend<CR>
+command! -nargs=0 Tchkd :!cygstart /cygdrive/c/Progra~1/TortoiseSVN/bin/TortoiseProc.exe /command:repostatus /path:`cygpath -aw "%:p:h"` /closeonend<CR>
+
+" vim:filetype=vim

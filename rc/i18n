@@ -1,0 +1,32 @@
+"============================================================================
+" 国際化関連
+"============================================================================
+" Vim 内部で使われる文字エンコーディングを設定する。
+set encoding=utf8
+" 既存ファイルの編集を開始するときに考慮される文字エンコーディングのリスト。
+set fileencodings=iso-2002-jp,utf-8,euc-jp,cp932
+" ターミナルで使われるエンコーディング名。このオプションは、どの文字エンコー
+" ディングをキーボードが生成し、どの文字エンコーディングをディスプレイが理解
+" できるかを指定する。GUI版ではキーボードにのみ適用される(ディスプレイには
+" オプション 'encoding' が使われる)。
+" cygwin 1.7 以降は UTF-8 となる。
+set termencoding=utf8
+
+" エンコーディングを指定して再読み込み。
+" <F7> キーでメニューが出る。
+function! ChangeFileencoding()
+  let encodings = ['iso-2002-jp', 'utf-8', 'euc-jp', 'cp932']
+  let prompt_encs = []
+  let index = 0
+  while index < len(encodings)
+    call add(prompt_encs, index.'. '.encodings[index])
+    let index = index + 1
+  endwhile
+  let choice = inputlist(prompt_encs)
+  if choice >= 0 && choice < len(encodings)
+    execute 'e ++enc='.encodings[choice].' %:p'
+  endif
+endf
+nmap <F7> :call ChangeFileencoding()<CR>
+
+" vim:filetype=vim

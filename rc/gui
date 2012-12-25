@@ -1,0 +1,25 @@
+"============================================================================
+" gvim 用の設定
+"============================================================================
+" ウィンドウの大きさを設定する。
+winsize 80 40
+" フォントを設定する。
+"  フォント名: M+1VM+IPAG_circle
+"  文字高さ: 10
+"  文字セット: SHIFTJIS
+set guifont=M+1VM+IPAG_circle:h10:cSHIFTJIS
+" ツールバーを無効にする。
+set guioptions-=T
+" 選択時、Windows のクリップボードを使う。
+set guioptions+=a
+" ヘルプ閲覧時に使う
+set mouse=h
+"set mouse=nvh
+
+" カラースキームを設定
+colorscheme darkocean
+
+"set nobackup
+"set shellslash
+
+" vim:filetype=vim
