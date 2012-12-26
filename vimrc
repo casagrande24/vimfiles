@@ -6,8 +6,8 @@
 set nocompatible
 filetype off
 
-source ~/vimfiles/rc/i18n
-source ~/vimfiles/rc/vundle
-source ~/vimfiles/rc/general
+source $DOTVIM/rc/i18n
+source $DOTVIM/rc/vundle
+source $DOTVIM/rc/general
 
 filetype plugin indent on

@@ -117,16 +117,16 @@ if has("unix")
   " code common to Cygwin and Linux
   if has("win32unix")
     " code for Cygwin but not Linux
-    source ~/vimfiles/rc/cygwin
+    source $DOTVIM/rc/cygwin
   else
     " code for Linux but not Cygwin
   endif
 elseif has("win32")
   " code common to Windows GUI and CUI
-  source ~/vimfiles/rc/windows
+  source $DOTVIM/rc/windows
   if has('gui_running')
     " code for windows-native Vim GUI version
-    " source ~/vimfiles/rc/gui
+    " source $DOTVIM/rc/gui
   else
     " code for windows-native Vim CUI version
   endif
@@ -137,8 +137,8 @@ endif
 "============================================================================
 " 目的別設定をインクルード
 "============================================================================
-source ~/vimfiles/rc/tagjump
-source ~/vimfiles/rc/java
-source ~/vimfiles/rc/aplix
+source $DOTVIM/rc/tagjump
+source $DOTVIM/rc/java
+source $DOTVIM/rc/aplix
 
 " vim:filetype=vim
