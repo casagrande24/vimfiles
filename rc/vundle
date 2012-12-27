@@ -18,6 +18,8 @@ Bundle 'gmarik/vundle'
 Bundle 'DarkOcean.vim'
 " GNU GLOBAL
 Bundle 'gtags.vim'
+" 日本語ヘルプ [GitHub]
+Bundle 'vim-jp/vimdoc-ja'
 
 "----------------------------------------------------------------------------
 " Brief help
