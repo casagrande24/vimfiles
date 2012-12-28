@@ -23,8 +23,6 @@ set background=dark
 set cmdheight=2
 " ルーラーを表示する。
 set ruler
-" カラースキームを設定
-colorscheme darkocean
 
 "----------------------------------------------------------------------------
 " 検索関連
@@ -114,22 +112,33 @@ autocmd BufReadPost *
 " プラットフォーム毎の設定をインクルード
 "============================================================================
 if has("unix")
-  " code common to Cygwin and Linux
+
+  " --- code common to Cygwin and Linux ---
+  " カラースキームを設定 (depend on terminal?)
+  colorscheme darkocean
+
   if has("win32unix")
-    " code for Cygwin but not Linux
+    " --- code for Cygwin but not Linux ---
     source $DOTVIM/rc/cygwin
   else
-    " code for Linux but not Cygwin
+    " --- code for Linux but not Cygwin ---
   endif
+
 elseif has("win32")
-  " code common to Windows GUI and CUI
+
+  " --- code common to Windows GUI and CUI ---
+  " カラースキームを設定
+  colorscheme darkocean
+
   source $DOTVIM/rc/windows
+
   if has('gui_running')
-    " code for windows-native Vim GUI version
-    " source $DOTVIM/rc/gui
+    " --- code for windows-native Vim GUI version ---
+    " It will be done by rc/gui file.
   else
-    " code for windows-native Vim CUI version
+    " --- code for windows-native Vim CUI version ---
   endif
+
 else
   echoerr "Unknown OS"
 endif
