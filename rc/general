@@ -139,6 +139,6 @@ endif
 "============================================================================
 source $DOTVIM/rc/tagjump
 source $DOTVIM/rc/java
-source $DOTVIM/rc/aplix
+source $DOTVIM/rc/office
 
 " vim:filetype=vim
