@@ -17,7 +17,7 @@ set mouse=h
 "set mouse=nvh
 
 " カラースキームを設定
-colorscheme darkocean
+colorscheme elflord
 
 "set nobackup
 "set shellslash

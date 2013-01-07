@@ -2,4 +2,7 @@
 " Windows 用の設定
 "============================================================================
 
+" 編集中ファイルのあるディレクトリでExplorerを開く
+command! -nargs=0 Exp :!start /b explorer %:p:h<CR>
+
 " vim:filetype=vim
