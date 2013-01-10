@@ -27,15 +27,16 @@ let Tlist_Show_One_File=1
 let Tlist_Ctags_Cmd='ctags'
 let Tlist_WinWidth = 40
 
-function! s:ReverseTagJump()
-    let l:pattern = expand("<cword>")
+function! s:ReverseTagJump(...) abort
+    let l:pattern = (a:0 > 0) ? a:1 : expand("<cword>")
     let l:save_tags = &tags
     set tags=rtags
+    echo "ReverseTagJump " . l:pattern
     execute "ltag " . l:pattern
     let &tags = l:save_tags
 endfunction
 
 " 可変引数(0 or 1)にしたい
-command! -nargs=0 Rtag call s:ReverseTagJump()
+command! -nargs=? Rtag call s:ReverseTagJump(<q-args>)
 
 " vim:filetype=vim
