@@ -9,11 +9,12 @@ nmap <F11> :tp<CR>
 nmap <F12> :tn<CR>
 
 " GNU GLOBAL 用マップ (マーク G を使う)
-nmap <C-k> :GtagsCursor<CR>
+"nmap <C-k> :GtagsCursor<CR>
 nmap <C-n> :cn<CR>
 nmap <C-p> :cp<CR>
 nmap <S-C-n> :lnext<CR>
 nmap <S-C-p> :lprevious<CR>
+nmap <C-k> :Rtag<CR>
 cab gt Gtags
 cab gb normal `G
 "cab gc GtagsCursor
@@ -29,14 +30,18 @@ let Tlist_WinWidth = 40
 
 function! s:ReverseTagJump(...) abort
     let l:pattern = (a:0 > 0) ? a:1 : expand("<cword>")
-    let l:save_tags = &tags
-    set tags=rtags
-    echo "ReverseTagJump " . l:pattern
-    execute "ltag " . l:pattern
-    let &tags = l:save_tags
+    try
+        let l:save_tags = &tags
+        set tags=rtags
+        execute "ltag " . l:pattern
+        lwindow
+    catch
+        echo "Rtag:" . v:exception
+    finally
+        let &tags = l:save_tags
+    endtry
 endfunction
 
-" 可変引数(0 or 1)にしたい
-command! -nargs=? Rtag call s:ReverseTagJump(<q-args>)
+command! -nargs=? Rtag call s:ReverseTagJump(<f-args>)
 
 " vim:filetype=vim
