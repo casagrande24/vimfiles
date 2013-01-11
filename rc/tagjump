@@ -10,10 +10,10 @@ nmap <F12> :tn<CR>
 
 " GNU GLOBAL 用マップ (マーク G を使う)
 "nmap <C-k> :GtagsCursor<CR>
-nmap <C-n> :cn<CR>
-nmap <C-p> :cp<CR>
-nmap <S-C-n> :lnext<CR>
-nmap <S-C-p> :lprevious<CR>
+"nmap <C-n> :cn<CR>
+"nmap <C-p> :cp<CR>
+nmap <C-n> :lnext<CR>
+nmap <C-p> :lprevious<CR>
 nmap <C-k> :Rtag<CR>
 cab gt Gtags
 cab gb normal `G
@@ -32,7 +32,7 @@ function! s:ReverseTagJump(...) abort
     let l:pattern = (a:0 > 0) ? a:1 : expand("<cword>")
     try
         let l:save_tags = &tags
-        set tags=rtags
+        set tags=RTAGS
         execute "ltag " . l:pattern
         lwindow
     catch
