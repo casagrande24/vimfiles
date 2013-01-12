@@ -9,7 +9,7 @@
 set exrc
 " コマンド :autocmd やシェルコマンド、書き込みコマンドがカレントディレクトリ
 " 内のファイル .vimrc や  .exrc では使用できなくなり、マッピングコマンドも
-" 表示されるようになる。これは exrc オプションを有効にしているため。
+" 表示されるようになる。これは 'exrc' を有効にしているため設定している。
 set secure
 " コマンドライン補完を行う。TAB、Ctrl-P/N で選択する。
 set wildmenu
@@ -49,7 +49,7 @@ set expandtab
 nmap <silent> <F6> :set expandtab!<CR>
 " CTRL-X CTRL-K の補完に使う辞書。
 set dictionary=/usr/share/dict/words
-" [[, ]] で中央に表示させる
+" [[, ]] で中央に表示させる。
 nmap [[ [[z.
 nmap ]] ]]z.
 
@@ -62,7 +62,7 @@ set hidden
 nmap <PageUp> :bp<CR>
 nmap <PageDown> :bn<CR>
 nmap <DEL> :bd<CR>
-" CTRL-^ が使えないので、CTRL-\ で代用
+" CTRL-^ が使えない PC のために CTRL-\ で代用する。
 nmap <C-\> :e #<CR>
 
 "----------------------------------------------------------------------------
@@ -142,12 +142,5 @@ elseif has("win32")
 else
   echoerr "Unknown OS"
 endif
-
-"============================================================================
-" 目的別設定をインクルード
-"============================================================================
-source $DOTVIM/rc/tagjump
-source $DOTVIM/rc/java
-source $DOTVIM/rc/office
 
 " vim:filetype=vim
