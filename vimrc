@@ -13,13 +13,7 @@ source $DOTVIM/rc/vundle
 " general settings
 source $DOTVIM/rc/general
 
-" tag jump related settings
-" source $DOTVIM/rc/tagjump
-
-" java related settings
-source $DOTVIM/rc/java
-
-" special settings for my work
-" source $DOTVIM/rc/office
+" platform specific settings
+source $DOTVIM/rc/platform
 
 filetype plugin indent on
