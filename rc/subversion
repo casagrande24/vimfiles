@@ -1,7 +1,0 @@
-" TortoiseSVN
-command! -nargs=0 Tlog :!cygstart /cygdrive/c/Progra~1/TortoiseSVN/bin/TortoiseProc.exe /command:log /path:`cygpath -aw "%:p"` /closeonend<CR>
-command! -nargs=0 Tdiff :!cygstart /cygdrive/c/Progra~1/TortoiseSVN/bin/TortoiseProc.exe /command:diff /path:`cygpath -aw "%:p"` /closeonend<CR>
-command! -nargs=0 Tchk :!cygstart /cygdrive/c/Progra~1/TortoiseSVN/bin/TortoiseProc.exe /command:repostatus /path:`cygpath -aw "%:p"` /closeonend<CR>
-command! -nargs=0 Tchkd :!cygstart /cygdrive/c/Progra~1/TortoiseSVN/bin/TortoiseProc.exe /command:repostatus /path:`cygpath -aw "%:p:h"` /closeonend<CR>
-
-" vim:filetype=vim
