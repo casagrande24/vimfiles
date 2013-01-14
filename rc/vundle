@@ -15,7 +15,7 @@ Bundle 'gmarik/vundle'
 " My Bundles
 "----------------------------------------------------------------------------
 " カラースキーム darkocean
-Bundle 'DarkOcean.vim'
+"Bundle 'DarkOcean.vim'
 " GNU GLOBAL
 Bundle 'gtags.vim'
 " 日本語ヘルプ [GitHub]

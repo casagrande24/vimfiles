@@ -18,7 +18,7 @@ set wildmenu
 " 表示関連
 "----------------------------------------------------------------------------
 " 暗い背景色のターミナルとする。
-set background=dark
+"set background=dark
 " コマンドラインに使われる画面上の行数。
 set cmdheight=2
 " ルーラーを表示する。
@@ -91,6 +91,11 @@ let c_no_comment_fold=1
 "自動整形機能を一部OFF(コメント開始文字の自動挿入)
 "ここでは効果無い
 "set formatoptions-=ro
+
+" 追加のハイライト定義
+" - 目立たせないテキスト
+autocmd ColorScheme *
+  \ hi UnobtrusiveText ctermfg=darkblue guifg=DarkBlue
 
 "----------------------------------------------------------------------------
 " その他

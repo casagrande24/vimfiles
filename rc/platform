@@ -5,7 +5,8 @@ if has("unix")
 
   " --- code common to Cygwin and Linux ---
   " カラースキームを設定 (depend on terminal?)
-  colorscheme darkocean
+  "colorscheme darkocean
+  colorscheme koehler
 
   if has("win32unix")
     " --- code for Cygwin but not Linux ---
@@ -18,7 +19,7 @@ elseif has("win32")
 
   " --- code common to Windows GUI and CUI ---
   " カラースキームを設定
-  colorscheme darkocean
+  "colorscheme darkocean
 
   source $DOTVIM/rc/os/windows
 
