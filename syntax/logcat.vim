@@ -12,7 +12,7 @@ elseif exists("b:current_syntax")
   finish
 endif
 
-syn match	logcatActivityManager	"^.*\/ActivityManager.*$"
+"syn match	logcatActivityManager	"^.*\/ActivityManager.*$"
 
 syn case ignore
 syn keyword	logcatError	Error Exception Throwable
@@ -28,7 +28,8 @@ if version >= 508 || !exists("did_drchip_tags_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink logcatActivityManager	UnobtrusiveText
+  "HiLink logcatActivityManager	UnobtrusiveText
+  HiLink logcatError	ErrorMsg
 
   delcommand HiLink
 endif

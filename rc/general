@@ -95,6 +95,13 @@ let c_no_comment_fold=1
 " 追加のハイライト定義
 " - 目立たせないテキスト
 autocmd ColorScheme *
+  \ hi RedBoldText     term=bold cterm=bold ctermfg=Red     guifg=Red     |
+  \ hi GreenBoldText   term=bold cterm=bold ctermfg=Green   guifg=Green   |
+  \ hi BlueBoldText    term=bold cterm=bold ctermfg=Blue    guifg=Blue    |
+  \ hi YellowBoldText  term=bold cterm=bold ctermfg=Yellow  guifg=Yellow  |
+  \ hi CyanBoldText    term=bold cterm=bold ctermfg=Cyan    guifg=Cyan    |
+  \ hi MagentaBoldText term=bold cterm=bold ctermfg=Magenta guifg=Magenta |
+  \ hi GrayBoldText    term=bold cterm=bold ctermfg=Gray    guifg=Gray    |
   \ hi UnobtrusiveText ctermfg=darkblue guifg=DarkBlue
 
 "----------------------------------------------------------------------------
