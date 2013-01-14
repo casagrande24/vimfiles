@@ -14,6 +14,9 @@ endif
 
 syn match	logcatActivityManager	"^.*\/ActivityManager.*$"
 
+syn case ignore
+syn keyword	logcatError	Error Exception Throwable
+
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
