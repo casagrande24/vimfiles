@@ -1,3 +1,31 @@
+" Vim plugin for highlight patterns which read from a file
+" Maintainer:  Tokikazu Ohya <ohya@art.plala.or.jp>
+" Last Change: 2013 Jan 15
+"
+" Usage:
+"   :HlLoad <pattern file>
+"
+" File Format:
+" %<color>
+" [pattern]
+" [pattern]
+" [...]
+"
+" %<color>
+" [pattern]
+" [...]
+"
+" color is one of following items:
+"   Red, Green, Blue, Yellow, Magenta, Gray, Unobtrusive
+"
+" Example:
+"   %Red
+"   Foo
+"   Bar
+"
+"   %DarkBlue
+"   ^.*Not interestd.*$
+
 
 function! s:Highlight(fname) abort
     let l:fg = 'Red'
@@ -14,19 +42,25 @@ function! s:Highlight(fname) abort
             let line = substitute(line, "^%%", "%", "")
         endif
 
-        echo "syn keyword highlight" . l:fg . " " . line
-        "execute "syn keyword highlight" . l:fg . " " . line
         execute "syn match highlight" . l:fg . " \"" . line . "\""
 
     endfor
-    hi def link highlightRed         RedBoldText
-    hi def link highlightGreen       GreenBoldText
-    hi def link highlightBlue        BlueBoldText
-    hi def link highlightYellow      YellowBoldText
-    hi def link highlightCyan        CyanBoldText
-    hi def link highlightMagenta     MagentaBoldText
-    hi def link highlightGray        GrayBoldText
-    hi def link highlightUnobtrusive UnobtrusiveText
+
+    hi def link highlightRed             RedBold
+    hi def link highlightGreen           GreenBold
+    hi def link highlightBlue            BlueBold
+    hi def link highlightYellow          YellowBold
+    hi def link highlightCyan            CyanBold
+    hi def link highlightMagenta         MagentaBold
+    hi def link highlightGray            GrayBold
+
+    hi def link highlightDarkRed         DarkRed
+    hi def link highlightDarkGreen       DarkGreen
+    hi def link highlightDarkBlue        DarkBlue
+    hi def link highlightDarkYellow      DarkYellow
+    hi def link highlightDarkCyan        DarkCyan
+    hi def link highlightDarkMagenta     DarkMagenta
+    hi def link highlightDarkGray        DarkGray
 endfunction
 
 command! -nargs=1 -complete=file HlLoad call s:Highlight(<q-args>)

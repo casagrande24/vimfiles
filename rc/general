@@ -93,16 +93,21 @@ let c_no_comment_fold=1
 "set formatoptions-=ro
 
 " 追加のハイライト定義
-" - 目立たせないテキスト
 autocmd ColorScheme *
-  \ hi RedBoldText     term=bold cterm=bold ctermfg=Red     guifg=Red     |
-  \ hi GreenBoldText   term=bold cterm=bold ctermfg=Green   guifg=Green   |
-  \ hi BlueBoldText    term=bold cterm=bold ctermfg=Blue    guifg=Blue    |
-  \ hi YellowBoldText  term=bold cterm=bold ctermfg=Yellow  guifg=Yellow  |
-  \ hi CyanBoldText    term=bold cterm=bold ctermfg=Cyan    guifg=Cyan    |
-  \ hi MagentaBoldText term=bold cterm=bold ctermfg=Magenta guifg=Magenta |
-  \ hi GrayBoldText    term=bold cterm=bold ctermfg=Gray    guifg=Gray    |
-  \ hi UnobtrusiveText ctermfg=darkblue guifg=DarkBlue
+  \ hi RedBold     term=bold cterm=bold ctermfg=Red     gui=bold guifg=Red     |
+  \ hi GreenBold   term=bold cterm=bold ctermfg=Green   gui=bold guifg=Green   |
+  \ hi BlueBold    term=bold cterm=bold ctermfg=Blue    gui=bold guifg=Blue    |
+  \ hi YellowBold  term=bold cterm=bold ctermfg=Yellow  gui=bold guifg=Yellow  |
+  \ hi CyanBold    term=bold cterm=bold ctermfg=Cyan    gui=bold guifg=Cyan    |
+  \ hi MagentaBold term=bold cterm=bold ctermfg=Magenta gui=bold guifg=Magenta |
+  \ hi GrayBold    term=bold cterm=bold ctermfg=Gray    gui=bold guifg=Gray    |
+  \ hi DarkRed     ctermfg=DarkRed     guifg=DarkRed     |
+  \ hi DarkGreen   ctermfg=DarkGreen   guifg=DarkGreen   |
+  \ hi DarkBlue    ctermfg=DarkBlue    guifg=DarkBlue    |
+  \ hi DarkYellow  ctermfg=DarkYellow  guifg=DarkYellow  |
+  \ hi DarkCyan    ctermfg=DarkCyan    guifg=DarkCyan    |
+  \ hi DarkMagenta ctermfg=DarkMagenta guifg=DarkMagenta |
+  \ hi DarkGray    ctermfg=DarkGray    guifg=DarkGray
 
 "----------------------------------------------------------------------------
 " その他
