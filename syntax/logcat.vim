@@ -1,4 +1,4 @@
-" Language:		android log
+" Language:		Android log file
 " Maintainer:	Tokikazu Ohya <ohya@art.plala.or.jp>
 " Last Change:	Jan 15, 2013
 " Version:		0.1
@@ -12,7 +12,7 @@ elseif exists("b:current_syntax")
   finish
 endif
 
-"syn match	logcatActivityManager	"^.*\/ActivityManager.*$"
+syn match	logcatTime	"^\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d: "
 
 syn case ignore
 syn keyword	logcatError	Error Exception Throwable
@@ -28,7 +28,7 @@ if version >= 508 || !exists("did_drchip_tags_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  "HiLink logcatActivityManager	UnobtrusiveText
+  HiLink logcatTime	DarkMagenta
   HiLink logcatError	ErrorMsg
 
   delcommand HiLink
