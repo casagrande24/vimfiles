@@ -101,12 +101,13 @@ autocmd ColorScheme *
   \ hi CyanBold    term=bold cterm=bold ctermfg=Cyan    gui=bold guifg=Cyan    |
   \ hi MagentaBold term=bold cterm=bold ctermfg=Magenta gui=bold guifg=Magenta |
   \ hi GrayBold    term=bold cterm=bold ctermfg=Gray    gui=bold guifg=Gray    |
-  \ hi DarkRed     ctermfg=DarkRed     guifg=DarkRed     |
-  \ hi DarkGreen   ctermfg=DarkGreen   guifg=DarkGreen   |
-  \ hi DarkBlue    ctermfg=DarkBlue    guifg=DarkBlue    |
-  \ hi DarkYellow  ctermfg=DarkYellow  guifg=DarkYellow  |
-  \ hi DarkCyan    ctermfg=DarkCyan    guifg=DarkCyan    |
-  \ hi DarkMagenta ctermfg=DarkMagenta guifg=DarkMagenta |
+  \ hi Gray        ctermfg=Gray        guifg=Gray                              |
+  \ hi DarkRed     ctermfg=DarkRed     guifg=DarkRed                           |
+  \ hi DarkGreen   ctermfg=DarkGreen   guifg=DarkGreen                         |
+  \ hi DarkBlue    ctermfg=DarkBlue    guifg=DarkBlue                          |
+  \ hi DarkYellow  ctermfg=DarkYellow  guifg=DarkYellow                        |
+  \ hi DarkCyan    ctermfg=DarkCyan    guifg=DarkCyan                          |
+  \ hi DarkMagenta ctermfg=DarkMagenta guifg=DarkMagenta                       |
   \ hi DarkGray    ctermfg=DarkGray    guifg=DarkGray
 
 "----------------------------------------------------------------------------

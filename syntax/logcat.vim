@@ -12,7 +12,7 @@ elseif exists("b:current_syntax")
   finish
 endif
 
-syn match	logcatTime	"^\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d: "
+syn match	logcatTime	"^\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d:\? "
 
 syn case ignore
 syn keyword	logcatError	Error Exception Throwable
@@ -28,7 +28,7 @@ if version >= 508 || !exists("did_drchip_tags_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink logcatTime	DarkMagenta
+  HiLink logcatTime	Gray
   HiLink logcatError	ErrorMsg
 
   delcommand HiLink
