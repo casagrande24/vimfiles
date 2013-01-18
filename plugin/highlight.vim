@@ -26,8 +26,7 @@
 "   %DarkBlue
 "   ^.*Not interestd.*$
 
-
-function! s:Highlight(fname) abort
+function! s:HighlightPattern(fname) abort
     let l:fg = 'Red'
     for line in readfile(a:fname)
         if (line =~ '^#' || line =~ '^$')
@@ -63,4 +62,22 @@ function! s:Highlight(fname) abort
     hi def link highlightDarkGray        DarkGray
 endfunction
 
-command! -nargs=1 -complete=file HlLoad call s:Highlight(<q-args>)
+command! -nargs=1 -complete=file HlLoad call s:HighlightPattern(<q-args>)
+
+function! s:HighlightTime() abort
+    let lnum = 1
+    while line <= getline(lnum)
+        call s:HighlightProcLine(line)
+        let lnum = lnum + 1
+    endwhile
+endfunction
+
+function! s:HighlightProcLine(line) abort
+    if a:line !~ "^\d\d-\d\d \d\d:\d\d:\d\d"
+    endif
+
+    if b:last_line ==# a:line
+        return
+    endif
+    b:last_line = a:line
+endfunction
