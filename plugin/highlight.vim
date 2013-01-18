@@ -16,7 +16,8 @@
 " [...]
 "
 " color is one of following items:
-"   Red, Green, Blue, Yellow, Magenta, Gray, Unobtrusive
+"   Red, Green, Blue, Yellow, Cyan, Magenta, Gray
+"   DarkRed, DarkGreen, DarkBlue, DarkYellow, DarkCyan, DarkMagenta, DarkGray
 "
 " Example:
 "   %Red
@@ -63,21 +64,3 @@ function! s:HighlightPattern(fname) abort
 endfunction
 
 command! -nargs=1 -complete=file HlLoad call s:HighlightPattern(<q-args>)
-
-function! s:HighlightTime() abort
-    let lnum = 1
-    while line <= getline(lnum)
-        call s:HighlightProcLine(line)
-        let lnum = lnum + 1
-    endwhile
-endfunction
-
-function! s:HighlightProcLine(line) abort
-    if a:line !~ "^\d\d-\d\d \d\d:\d\d:\d\d"
-    endif
-
-    if b:last_line ==# a:line
-        return
-    endif
-    b:last_line = a:line
-endfunction
