@@ -2,8 +2,9 @@
 " Cygwin 用の設定
 "============================================================================
 " ターミナル名
-"set term=cygwin
-set term=teraterm
+set term=cygwin
+"set term=teraterm
+"set term=builtin_xterm
 
 " 編集中ファイルのあるディレクトリでExplorerを開く
 command! -nargs=0 Exp :!explorer `cygpath -w %:p:h`<CR>
