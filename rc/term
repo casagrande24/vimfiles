@@ -1,0 +1,25 @@
+"============================================================================
+" ターミナル関連設定
+"============================================================================
+" Tera Term, xterm 向け
+if &term =~ "xterm"
+    " クリップボードからの貼り付け時に自動インデントを無効にする
+    let &t_SI .= "\e[?2004h"
+    let &t_EI .= "\e[?2004l"
+    let &pastetoggle = "\e[201~"
+
+    function XTermPasteBegin(ret)
+        set paste
+        return a:ret
+    endfunction
+
+    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+
+    " 挿入モードから抜けた時に IME をオフ
+    let &t_EI .= "\e[<s\e[<0t"
+    let &t_te .= "\e[<0t\e[<s"
+
+    set timeoutlen=100
+endif
+
+" vim:filetype=vim

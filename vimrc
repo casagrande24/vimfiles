@@ -16,4 +16,6 @@ source $DOTVIM/rc/general
 " platform specific settings
 source $DOTVIM/rc/platform
 
+source $DOTVIM/rc/term
+
 filetype plugin indent on
