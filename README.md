@@ -16,6 +16,11 @@ vim 環境を、Linux/Cygwin/Windows で共有します。
       $ git clone git://github.com/casagrande24/vimfiles.git .vim
       $ cp .vim/sample/.vimrc .
 
+      $ cd .vim
+      $ git submodule init
+      $ git submodule update
+
+
 ### For Cygwin(vim) and Windows(gvim)
       $ cd <HOME on Windows>
       $ git clone git://github.com/casagrande24/vimfiles.git
