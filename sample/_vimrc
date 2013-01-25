@@ -1,12 +1,17 @@
-"----------------------------------------
-" KaoriYa 版の問題対策
-"----------------------------------------
-""""""""""""""""""""""""""""""
-"g:no_vimrc_exampleを利用してvimrc_example.vimを無効化している時はここで読込
-""""""""""""""""""""""""""""""
-if exists('g:no_vimrc_example') && g:no_vimrc_example == 1
-  silent! source $VIMRUNTIME/vimrc_example.vim
-endif
+"============================================================================
+" GUI 版専用
+"============================================================================
+if has("win32") && has('gui_running')
+
+"----------------------------------------------------------------------------
+" Kaoriya版向け
+"----------------------------------------------------------------------------
+" g:no_vimrc_exampleを利用してvimrc_example.vimを無効化している時はここで読込
+"if exists('g:no_vimrc_example') && g:no_vimrc_example == 1
+"  silent! source $VIMRUNTIME/vimrc_example.vim
+"endif
 
 let $DOTVIM = expand('~/vimfiles')
 source $DOTVIM/vimrc
+
+endif " win32 && gui_running
