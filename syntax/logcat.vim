@@ -21,9 +21,9 @@ syn match logcatTime4x  "^\d\d-\d\d \d\d:\d\d:4\d.\d\d\d:\? "
 syn match logcatTime5x  "^\d\d-\d\d \d\d:\d\d:5\d.\d\d\d:\? "
 
 " stack trace をハイライトする
-syn match logcatStackTraceStart "\<[[:graph:]]*\Exception\>" nextgroup=logcatStackTraceLine
-syn match logcatStackTraceLine ":\s\+at\s.*" nextgroup=logcatStackTraceLine contained
-syn match logcatStackTraceLine "\<at\s.*"
+syn match logcatStackTraceStart "\<[[:graph:]]*\%(Exception\|Error\)\>.*" nextgroup=logcatStackTraceLine skipnl
+syn match logcatStackTraceLine  ".*:\s\+at\s.*" contained contains=logcatStackTraceFrame nextgroup=logcatStackTraceLine skipnl
+syn match logcatStackTraceFrame "\<at\s.*" contained
 
 " エラー系のキーワードをハイライトする
 syn case ignore
@@ -49,7 +49,7 @@ if version >= 508 || !exists("did_drchip_tags_inits")
 
   HiLink logcatError	            ErrorMsg
   HiLink logcatStackTraceStart	ErrorMsg
-  HiLink logcatStackTraceLine	ErrorMsg
+  HiLink logcatStackTraceFrame	ErrorMsg
 
   delcommand HiLink
 endif
