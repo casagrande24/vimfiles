@@ -9,4 +9,8 @@ nmap <F10> :execute "ta /^Java_.*_" . substitute(expand("%:t:r"), "_", "_1", "g"
 " print function name
 nmap <C-j> :echo FunctionName()<CR>
 
+" メソッド単位でジャンプ
+nmap <buffer> [[ [mzz
+nmap <buffer> ]] ]mzz
+
 " vim:filetype=vim
