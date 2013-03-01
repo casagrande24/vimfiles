@@ -18,8 +18,6 @@ if &term =~ "xterm"
     " 挿入モードから抜けた時に IME をオフ
     let &t_EI .= "\e[<s\e[<0t"
     let &t_te .= "\e[<0t\e[<s"
-
-    set timeoutlen=100
 endif
 
 " vim:filetype=vim
