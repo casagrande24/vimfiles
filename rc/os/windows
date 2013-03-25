@@ -5,4 +5,10 @@
 " 編集中ファイルのあるディレクトリでExplorerを開く
 command! -nargs=0 Exp :!start /b explorer %:p:h<CR>
 
+" TortoiseSVN 起動用設定
+command! -nargs=0 Tlog :!start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:log /path:%:p /closeonend<CR>
+command! -nargs=0 Tdiff :!start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:diff /path:%:p /closeonend<CR>
+command! -nargs=0 Tchk :!start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:repostatus /path:%:p /closeonend<CR>
+command! -nargs=0 Tchkd :!start C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:repostatus /path:%:p:h /closeonend<CR>
+
 " vim:filetype=vim
