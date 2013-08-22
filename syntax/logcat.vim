@@ -40,12 +40,12 @@ if version >= 508 || !exists("did_drchip_tags_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink logcatTime0x	DarkRed
-  HiLink logcatTime1x	DarkGreen
-  HiLink logcatTime2x	DarkYellow
-  HiLink logcatTime3x	DarkCyan
-  HiLink logcatTime4x	DarkBlue
-  HiLink logcatTime5x	DarkMagenta
+  HiLink logcatTime0x	DarkGreen
+  HiLink logcatTime1x	DarkYellow
+  HiLink logcatTime2x	DarkGreen
+  HiLink logcatTime3x	DarkYellow
+  HiLink logcatTime4x	DarkGreen
+  HiLink logcatTime5x	DarkYellow
 
   HiLink logcatError	            ErrorMsg
   HiLink logcatStackTraceStart	ErrorMsg
