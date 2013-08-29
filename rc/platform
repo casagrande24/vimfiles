@@ -3,16 +3,16 @@
 "============================================================================
 if has("unix")
 
-  " --- code common to Cygwin and Linux ---
+  " --- code common to Cygwin/Linux/MacOS ---
   " カラースキームを設定 (depend on terminal?)
   "colorscheme darkocean
   colorscheme koehler
 
   if has("win32unix")
-    " --- code for Cygwin but not Linux ---
+    " --- code for Cygwin but not Linux/MacOS ---
     source $DOTVIM/rc/os/cygwin
   else
-    " --- code for Linux but not Cygwin ---
+    " --- code for Linux/MacOS but not Cygwin ---
   endif
 
 elseif has("win32")
