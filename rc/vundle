@@ -20,6 +20,8 @@ Bundle 'gmarik/vundle'
 Bundle 'gtags.vim'
 " 日本語ヘルプ [GitHub]
 Bundle 'vim-jp/vimdoc-ja'
+" FunctionName()
+Bundle 'findfuncname.vim'
 
 "----------------------------------------------------------------------------
 " Brief help
