@@ -12,7 +12,14 @@ if has("unix")
     " --- code for Cygwin but not Linux/MacOS ---
     source $DOTVIM/rc/os/cygwin
   else
-    " --- code for Linux/MacOS but not Cygwin ---
+    if system('uname') =~ 'Darwin'
+        " --- code for MacOS ---
+        colorscheme koehler
+        "colorscheme murphy
+    else
+        " --- code for Linux ---
+        colorscheme koehler
+    endif
   endif
 
 elseif has("win32")
