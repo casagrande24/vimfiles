@@ -1,3 +1,5 @@
+" このファイル(scripts.vim)についてはヘルプ'usr_43'を参照のこと。
+
 if did_filetype()	" 既にファイル形式が決定している時は
   finish		    " このチェックは行わない
 endif

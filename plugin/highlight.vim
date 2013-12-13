@@ -1,6 +1,6 @@
 " Vim plugin for highlight patterns which read from a file
 " Maintainer:  Tokikazu Ohya <ohya@art.plala.or.jp>
-" Last Change: 2013 Jan 19
+" Last Change: 2013 Dec 13
 "==============================================================================
 " Usage:
 "   :HlLoad <pattern file>
@@ -54,7 +54,7 @@ let s:color_list = [
         \ 'White' ]
 
 "------------------------------------------------------------------------------
-" FUNCTION: define a highlight group
+" PRIVATE FUNCTION: define a highlight group
 "  - param : style list
 "  - retrun: defined highlight group-name
 " This is a private function.
@@ -138,7 +138,7 @@ function! s:HighlightDefineStyle(argv) abort
 endfunction
 
 "------------------------------------------------------------------------------
-" FUNCTION: highlight patterns
+" PRIVATE FUNCTION: highlight patterns
 "  - param : pattern file
 "  - retrun: none
 " Proccess a pattern file.
@@ -168,6 +168,21 @@ function! s:HighlightPattern(fname) abort
         " add a syntax with current highlight group
         execute 'syn match ' . l:name . ' "' . line . '"'
     endfor
+endfunction
+
+"------------------------------------------------------------------------------
+" GLOBAL FUNCTION: find and apply the pattern
+"  - param : file name
+"  - retrun: none
+" Searches a pattern file upwards until finds it, then apply.
+"------------------------------------------------------------------------------
+function! HighlightFindAndApply(fname) abort
+    let l:keywords_path = findfile(a:fname, ".;")
+    if (l:keywords_path != "")
+        call s:HighlightPattern(l:keywords_path)
+    else
+        " echo "No such file: " a:fname
+    endif
 endfunction
 
 "------------------------------------------------------------------------------

@@ -3,6 +3,7 @@
 "============================================================================
 
 if !exists("office_autocommands_loaded")
+    let office_autocommands_loaded = 1
 
     " cjava ファイルは java ファイルとして扱う。
     au BufNewFile,BufRead *.cjava setf java
