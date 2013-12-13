@@ -22,6 +22,8 @@ Bundle 'gtags.vim'
 Bundle 'vim-jp/vimdoc-ja'
 " FunctionName()
 Bundle 'findfuncname.vim'
+" Tag List
+Bundle 'taglist.vim'
 
 "----------------------------------------------------------------------------
 " Brief help
