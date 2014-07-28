@@ -18,4 +18,7 @@ source $DOTVIM/rc/platform
 
 source $DOTVIM/rc/term
 
+" % による対応括弧へのカーソル移動機能を強化
+source $VIMRUNTIME/macros/matchit.vim
+
 filetype plugin indent on
