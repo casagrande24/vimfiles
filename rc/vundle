@@ -22,8 +22,10 @@ Bundle 'gtags.vim'
 Bundle 'vim-jp/vimdoc-ja'
 " FunctionName()
 Bundle 'findfuncname.vim'
-" Tag List
+" Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
 Bundle 'taglist.vim'
+" An extensible & universal comment plugin that also handles embedded filetypes
+Bundle 'tComment'
 
 "----------------------------------------------------------------------------
 " Brief help
