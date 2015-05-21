@@ -26,6 +26,8 @@ Bundle 'findfuncname.vim'
 Bundle 'taglist.vim'
 " An extensible & universal comment plugin that also handles embedded filetypes
 Bundle 'tComment'
+" JSON syntax highlight
+Bundle 'elzr/vim-json'
 
 "----------------------------------------------------------------------------
 " Brief help
