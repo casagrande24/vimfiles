@@ -42,7 +42,9 @@ endfunction
 command! QFNext call s:QuickFixNext()
 command! QFPrev call s:QuickFixPrev()
 
-nmap <C-n> :QFNext<CR>
-nmap <C-p> :QFPrev<CR>
+" Meta+N : next item
+" Meta+P : prev item
+nmap n :QFNext<CR>
+nmap p :QFPrev<CR>
 
 " vim:filetype=vim
