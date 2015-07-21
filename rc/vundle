@@ -33,6 +33,8 @@ Bundle 'elzr/vim-json'
 Bundle 'scrooloose/nerdtree'
 " Visually displaying indent levels in code
 Bundle 'nathanaelkane/vim-indent-guides'
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim
+Bundle 'ctrlp.vim'
 
 "----------------------------------------------------------------------------
 " Brief help
