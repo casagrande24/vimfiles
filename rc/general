@@ -79,6 +79,10 @@ nmap <C-\> :e #<CR>
 nmap <C-p> :tabp<CR>
 " Shift+Ctrl+N で次のタブ
 nmap <C-n> :tabn<CR>
+" ファイルはタブに読み込む(差分モードを除く)
+if (&diff==0)
+    :autocmd BufReadPost * tab ball
+endif
 
 "----------------------------------------------------------------------------
 " ファイル関連
@@ -143,9 +147,16 @@ autocmd BufReadPost *
   \   exe "normal! g`\"" |
   \ endif
 
-" MultipleSearch プラグイン設定
+"----------------------------------------------------------------------------
+" プラグイン設定
+"----------------------------------------------------------------------------
+" [MultipleSearch]
 "let MultipleSearchMaxColors=7
 "let MultipleSearchColorSequence="red,blue,green,magenta,cyan,gray,brown"
 "let MultipleSearchTextColorSequence="white,white,black,white,black,black,black"
+
+" [CtrlP]
+" Alt+R で起動
+let g:ctrlp_map = 'r'
 
 " vim:filetype=vim
