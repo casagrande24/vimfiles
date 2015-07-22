@@ -97,9 +97,10 @@ nmap gf gF
 cmap <c-x> <c-r>=expand('%:p:h')<CR>/
 " バックアップファイルは作らない
 set nobackup
-" undo ファイルは作らない。ただし、有効にしたらすぐ使えるように保存先
-" ディレクトリは設定しておく。
-set noundofile
+" スワップファイルも作らない
+set noswapfile
+" undo ファイルは作る(永続化)
+set undofile
 set undodir=/var/tmp
 
 "----------------------------------------------------------------------------
