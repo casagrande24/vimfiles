@@ -20,6 +20,9 @@ set mouse=h
 "colorscheme elflord
 colorscheme koehler
 
+" 効かない??
+set winaltkeys=no
+
 "set nobackup
 "set shellslash
 

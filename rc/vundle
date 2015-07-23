@@ -35,6 +35,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'nathanaelkane/vim-indent-guides'
 " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
 Bundle 'ctrlp.vim'
+" multiple-cursors
+Bundle 'terryma/vim-multiple-cursors'
 
 "----------------------------------------------------------------------------
 " Brief help

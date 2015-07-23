@@ -14,7 +14,7 @@ nmap <F12> :tn<CR>
 "nmap <C-p> :cp<CR>
 "nmap <C-n> :lnext<CR>
 "nmap <C-p> :lprevious<CR>
-nmap <C-k> :Rtag<CR>
+nmap <C-k>r :Rtag<CR>
 cab gt Gtags
 cab gb normal `G
 "cab gc GtagsCursor
