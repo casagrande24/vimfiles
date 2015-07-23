@@ -80,9 +80,14 @@ nmap <C-p> :tabp<CR>
 " Shift+Ctrl+N で次のタブ
 nmap <C-n> :tabn<CR>
 " ファイルはタブに読み込む(差分モードを除く)
-if (&diff==0)
-    :autocmd BufReadPost * tab ball
-endif
+let blacklist = ['help']
+"autocmd BufReadPost * echo "ft=".&ft
+"if (&diff == 0)
+"    autocmd BufReadPost *
+"        \ if index(blacklist, &ft) < 0 |
+"        \   tab ball |
+"        \ endif
+"endif
 
 "----------------------------------------------------------------------------
 " ファイル関連
