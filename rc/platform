@@ -7,6 +7,8 @@ if has("unix")
   " カラースキームを設定 (depend on terminal?)
   "colorscheme darkocean
   colorscheme koehler
+  " TODO: gvim と共通化したい
+  set undodir=/var/tmp
 
   if has("win32unix")
     " --- code for Cygwin but not Linux/MacOS ---

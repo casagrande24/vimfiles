@@ -106,7 +106,7 @@ set nobackup
 set noswapfile
 " undo ファイルは作る(永続化)
 set undofile
-set undodir=/var/tmp
+"set undodir=/var/tmp
 
 "----------------------------------------------------------------------------
 " 構文解析関連(ハイライト、整形、折りたたみ)
