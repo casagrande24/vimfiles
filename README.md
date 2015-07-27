@@ -37,3 +37,6 @@ vim 環境を、Linux/Cygwin/Windows で共有します。
       $ ln -s <path to clone> .vim
       $ cp .vim/sample/.vimrc .
 
+      create a temporary directory for undo
+      $ cd /usr/local/var
+      $ ln -s /cygdrive/c/Users/Default/AppData/Local/Temp tmp

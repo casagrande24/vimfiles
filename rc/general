@@ -52,6 +52,8 @@ set tabstop=4
 set softtabstop=4
 "  挿入モードで <Tab> を挿入するとき、代わりに適切な数の空白を使う。
 set expandtab
+" 自動的に改行されないようにする(Kaoriya版のデフォルト設定回避)
+autocmd FileType text setlocal textwidth=0
 " TAB 文字入力の切り替えキーの設定。
 nmap <silent> <F6> :set expandtab!<CR>
 " CTRL-X CTRL-K の補完に使う辞書。
