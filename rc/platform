@@ -8,7 +8,7 @@ if has("unix")
   "colorscheme darkocean
   colorscheme koehler
   " TODO: gvim と共通化したい
-  set undodir=/usr/local/var/tmp
+  set undodir=/usr/local/var/tmp/vim
 
   if has("win32unix")
     " --- code for Cygwin but not Linux/MacOS ---
@@ -31,7 +31,7 @@ elseif has("win32")
   "colorscheme darkocean
 
   source $DOTVIM/rc/os/windows
-  set undodir=C:\Users\Default\AppData\Local\Temp
+  set undodir=C:\Users\Default\AppData\Local\Temp\vim
 
   if has('gui_running')
     " --- code for windows-native Vim GUI version ---
