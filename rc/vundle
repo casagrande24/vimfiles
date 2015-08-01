@@ -29,7 +29,6 @@ Bundle 'tComment'
 " JSON syntax highlight
 Bundle 'elzr/vim-json'
 " NERDTree explore the filesystem
-" https://github.com/scrooloose/nerdtree
 Bundle 'scrooloose/nerdtree'
 " Visually displaying indent levels in code
 Bundle 'nathanaelkane/vim-indent-guides'
