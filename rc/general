@@ -70,9 +70,11 @@ nmap T gE
 "----------------------------------------------------------------------------
 " バッファが放棄されるときに隠れ状態にする。
 set hidden
-" バッファの切り替えキーの設定。
-nmap <PageUp> :bp<CR>
-nmap <PageDown> :bn<CR>
+" Ctrl+P/N でバッファ切り替え
+nmap <C-p> :bp<CR>
+nmap <C-n> :bn<CR>
+" nmap <PageUp> :bp<CR>
+" nmap <PageDown> :bn<CR>
 nmap <DEL> :bd<CR>
 " CTRL-^ が使えない PC のために CTRL-\ で代用する。
 nmap <C-\> :e #<CR>
@@ -80,10 +82,9 @@ nmap <C-\> :e #<CR>
 "----------------------------------------------------------------------------
 " タブページ関連
 "----------------------------------------------------------------------------
-" Shift+Ctrl+P で前のタブ
-nmap <C-p> :tabp<CR>
-" Shift+Ctrl+N で次のタブ
-nmap <C-n> :tabn<CR>
+" TABキーでのタブ切り替え
+nmap <C-TAB>   :tabn<CR>
+nmap <S-C-TAB> :tabp<CR>
 " ファイルはタブに読み込む(差分モードを除く)
 "let blacklist = ['help']
 "autocmd BufReadPost * echo "ft=".&ft
@@ -170,8 +171,8 @@ autocmd BufReadPost *
 let g:ctrlp_map = '<C-K><C-P>'
 
 " [vim-multiple-cursors]
-let g:multi_cursor_start_key = '<C-K><C-N>'
-let g:multi_cursor_start_word_key='g<C-K><C-N>'
+let g:multi_cursor_start_key = 'g<C-K><C-N>'
+let g:multi_cursor_start_word_key='<C-K><C-N>'
 
 " [NERD Tree]
 map <C-K><C-F> :NERDTreeToggle<CR>
