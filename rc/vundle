@@ -36,6 +36,8 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'ctrlp.vim'
 " multiple-cursors
 Bundle 'terryma/vim-multiple-cursors'
+" lean & mean status/tabline for vim that's light as air
+Bundle "bling/vim-airline"
 
 "----------------------------------------------------------------------------
 " Brief help
