@@ -1,44 +1,43 @@
 "============================================================================
 " プラグイン管理設定
-"
-" どうも .vim を用意してないとダメみたい。
 "============================================================================
-set rtp+=$DOTVIM/bundle/vundle/
-call vundle#rc('$DOTVIM/bundle')
+set rtp+=$DOTVIM/bundle/Vundle.vim
+call vundle#begin('$DOTVIM/bundle')
 
 "----------------------------------------------------------------------------
 " Let Vundle manage Vundle.
 "----------------------------------------------------------------------------
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 "----------------------------------------------------------------------------
 " My Bundles
 "----------------------------------------------------------------------------
 " カラースキーム darkocean
-"Bundle 'DarkOcean.vim'
+"Plugin 'DarkOcean.vim'
 " GNU GLOBAL
-Bundle 'gtags.vim'
+Plugin 'gtags.vim'
 " 日本語ヘルプ [GitHub]
-Bundle 'vim-jp/vimdoc-ja'
+Plugin 'vim-jp/vimdoc-ja'
 " FunctionName()
-Bundle 'findfuncname.vim'
+Plugin 'findfuncname.vim'
 " Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
-Bundle 'taglist.vim'
+Plugin 'taglist.vim'
 " An extensible & universal comment plugin that also handles embedded filetypes
-Bundle 'tComment'
+Plugin 'tComment'
 " JSON syntax highlight
-Bundle 'elzr/vim-json'
+Plugin 'elzr/vim-json'
 " NERDTree explore the filesystem
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " Visually displaying indent levels in code
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
-Bundle 'ctrlp.vim'
+Plugin 'ctrlp.vim'
 " multiple-cursors
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 " lean & mean status/tabline for vim that's light as air
-Bundle "bling/vim-airline"
+"Plugin "bling/vim-airline"
 
+call vundle#end()
 "----------------------------------------------------------------------------
 " Brief help
 "----------------------------------------------------------------------------
