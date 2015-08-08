@@ -82,9 +82,9 @@ nmap <C-\> :e #<CR>
 "----------------------------------------------------------------------------
 " タブページ関連
 "----------------------------------------------------------------------------
-" TABキーでのタブ切り替え
-nmap <C-TAB>   :tabn<CR>
-nmap <S-C-TAB> :tabp<CR>
+" Ctrl+J/K でタブ切り替え
+nmap <C-j> :tabp<CR>
+nmap <C-k> :tabn<CR>
 " ファイルはタブに読み込む(差分モードを除く)
 "let blacklist = ['help']
 "autocmd BufReadPost * echo "ft=".&ft
@@ -159,6 +159,8 @@ autocmd BufReadPost *
   \   exe "normal! g`\"" |
   \ endif
 
+" CTRL-L をキーマップで使うため、オリジナル動作は CTRL-L 連打とする
+nmap <C-L><C-L> :redraw!<CR>
 "----------------------------------------------------------------------------
 " プラグイン設定
 "----------------------------------------------------------------------------
@@ -168,14 +170,14 @@ autocmd BufReadPost *
 "let MultipleSearchTextColorSequence="white,white,black,white,black,black,black"
 
 " [CtrlP]
-let g:ctrlp_map = '<C-K><C-P>'
+let g:ctrlp_map = '<C-L><C-P>'
 
 " [vim-multiple-cursors]
-let g:multi_cursor_start_key = 'g<C-K><C-N>'
-let g:multi_cursor_start_word_key='<C-K><C-N>'
+let g:multi_cursor_start_key = 'g<C-L><C-N>'
+let g:multi_cursor_start_word_key='<C-L><C-N>'
 
 " [NERD Tree]
-map <C-K><C-F> :NERDTreeToggle<CR>
+map <C-L><C-F> :NERDTreeToggle<CR>
 
 " for vim-airline
 set laststatus=2
