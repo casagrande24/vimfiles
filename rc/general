@@ -61,10 +61,12 @@ set dictionary=/usr/share/dict/words
 " [[, ]] で中央に表示させる。
 nmap [[ [[z.
 nmap ]] ]]z.
-" t,T の動作を ge,gE (後方の単語の最後へ) に変更
+" t,T の動作を ge,gE (後方の単語の最後へ) に変更。
 nmap t ge
 nmap T gE
-
+" Visual モードで連続して数字のインクリメント可能に。
+vnoremap <c-a> <c-a>gv
+vnoremap <c-x> <c-x>gv
 "----------------------------------------------------------------------------
 " バッファ管理関連
 "----------------------------------------------------------------------------
@@ -148,16 +150,26 @@ autocmd ColorScheme *
   \ hi DarkGray    ctermfg=DarkGray    guifg=DarkGray
 
 "----------------------------------------------------------------------------
+" copy from vimrc_example.vim
+"----------------------------------------------------------------------------
+" ファイルを開いたときに以前のポジションに移動する。
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+" 最後に保存してから、どのくらい編集したのかの差分を表示する。
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+          \ | wincmd p | diffthis
+endif
+
+"----------------------------------------------------------------------------
 " その他
 "----------------------------------------------------------------------------
 "set title
 " 編集中のスクリプトを実行する。
 command! -nargs=* -complete=file Run :!./% <args><CR>
-" ファイルを開いたときに以前のポジションに移動する。
-autocmd BufReadPost *
-  \ if line("'\"") > 0 && line("'\"") <= line("$") |
-  \   exe "normal! g`\"" |
-  \ endif
 
 " CTRL-L をキーマップで使うため、オリジナル動作は CTRL-L 連打とする
 nmap <C-L><C-L> :redraw!<CR>
