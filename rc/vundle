@@ -34,8 +34,8 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'ctrlp.vim'
 " multiple-cursors
 Plugin 'terryma/vim-multiple-cursors'
-" lean & mean status/tabline for vim that's light as air
-"Plugin "bling/vim-airline"
+" A light and configurable statusline/tabline for Vim 
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
 "----------------------------------------------------------------------------
