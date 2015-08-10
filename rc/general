@@ -65,18 +65,19 @@ nmap ]] ]]z.
 nmap t ge
 nmap T gE
 " Visual モードで連続して数字のインクリメント可能に。
-vnoremap <c-a> <c-a>gv
-vnoremap <c-x> <c-x>gv
+vnoremap <C-A> <C-A>gv
+vnoremap <C-X> <C-X>gv
 "----------------------------------------------------------------------------
 " バッファ管理関連
 "----------------------------------------------------------------------------
 " バッファが放棄されるときに隠れ状態にする。
 set hidden
-" Ctrl+P/N でバッファ切り替え
-nmap <C-p> :bp<CR>
-nmap <C-n> :bn<CR>
-" nmap <PageUp> :bp<CR>
-" nmap <PageDown> :bn<CR>
+" Ctrl+J/K でバッファ切り替え
+nmap <C-j> :bp<CR>
+nmap <C-k> :bn<CR>
+" PageUp/Down でもバッファ切り替え
+nmap <PageUp> :bp<CR>
+nmap <PageDown> :bn<CR>
 nmap <DEL> :bd<CR>
 " CTRL-^ が使えない PC のために CTRL-\ で代用する。
 nmap <C-\> :e #<CR>
@@ -84,9 +85,9 @@ nmap <C-\> :e #<CR>
 "----------------------------------------------------------------------------
 " タブページ関連
 "----------------------------------------------------------------------------
-" Ctrl+J/K でタブ切り替え
-nmap <C-j> :tabp<CR>
-nmap <C-k> :tabn<CR>
+" Ctrl+P/N でタブ切り替え
+nmap <C-p> :tabp<CR>
+nmap <C-n> :tabn<CR>
 " ファイルはタブに読み込む(差分モードを除く)
 "let blacklist = ['help']
 "autocmd BufReadPost * echo "ft=".&ft
