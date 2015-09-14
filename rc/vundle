@@ -36,6 +36,9 @@ Plugin 'ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 " A light and configurable statusline/tabline for Vim 
 Plugin 'itchyny/lightline.vim'
+" Redmine wiki syntax for Vim
+" :set ft=redminewiki 
+Plugin 's3rvac/vim-syntax-redminewiki'
 
 call vundle#end()
 "----------------------------------------------------------------------------
