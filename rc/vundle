@@ -39,6 +39,8 @@ Plugin 'itchyny/lightline.vim'
 " Redmine wiki syntax for Vim
 " :set ft=redminewiki 
 Plugin 's3rvac/vim-syntax-redminewiki'
+" Enhanced javascript syntax
+Plugin 'jelera/vim-javascript-syntax'
 
 call vundle#end()
 "----------------------------------------------------------------------------
