@@ -195,4 +195,5 @@ map <C-L><C-F> :NERDTreeToggle<CR>
 
 " for vim-airline
 set laststatus=2
+
 " vim:filetype=vim
