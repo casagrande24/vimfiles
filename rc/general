@@ -67,6 +67,8 @@ nmap T gE
 " Visual モードで連続して数字のインクリメント可能に。
 vnoremap <C-A> <C-A>gv
 vnoremap <C-X> <C-X>gv
+" Visual モードで選択中の文字列で * 検索可能に。
+vnoremap * "zy:let @/ = @z<CR>n
 "----------------------------------------------------------------------------
 " バッファ管理関連
 "----------------------------------------------------------------------------
@@ -195,5 +197,11 @@ map <C-L><C-F> :NERDTreeToggle<CR>
 
 " for vim-airline
 set laststatus=2
+
+" redminewiki for Firefox with It's All Text plugin
+" let s:opened_file_path = expand('%:p')
+" if s:opened_file_path =~ '\.mozilla/firefox/.*redmine'
+"     au BufRead,BufNewFile *.txt set ft=redminewiki
+" endif
 
 " vim:filetype=vim
