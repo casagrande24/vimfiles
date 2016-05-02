@@ -41,6 +41,8 @@ Plugin 'itchyny/lightline.vim'
 Plugin 's3rvac/vim-syntax-redminewiki'
 " Enhanced javascript syntax
 Plugin 'jelera/vim-javascript-syntax'
+" surround.vim
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 "----------------------------------------------------------------------------
