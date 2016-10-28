@@ -43,6 +43,8 @@ Plugin 's3rvac/vim-syntax-redminewiki'
 Plugin 'jelera/vim-javascript-syntax'
 " surround.vim
 Plugin 'tpope/vim-surround'
+" highlight access log
+Plugin 'vim-scripts/httplog'
 
 call vundle#end()
 "----------------------------------------------------------------------------
