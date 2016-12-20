@@ -15,6 +15,7 @@ set exrc
 set wildmenu
 " マウスはノーマルモードとビジュアルモードで使う。
 "set mouse=nv
+set mouse=
 
 " modeline を有効にする。NOTE: CVE-2007-2438
 set modelines=5
