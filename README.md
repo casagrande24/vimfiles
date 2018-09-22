@@ -3,10 +3,10 @@
 
 ## PURPOSE
 
-vim 環境を、Linux/Mac/Cygwin(Windows) で共有します。
+vim 環境を、Linux/Mac/Cygwin/Windows で共有します。
 
 下記を前提としています。
- - Linux および Cygwin はコンソール版の vim を利用する
+ - Linux, Mac および Cygwin はコンソール版の vim を利用する
  - Windows は [KaoriYa](http://www.kaoriya.net/software/vim) さんの gvim (GUI版) を利用する
  - git がインストールしてある
 
