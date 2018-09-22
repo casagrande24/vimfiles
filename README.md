@@ -3,7 +3,7 @@
 
 ## PURPOSE
 
-vim 環境を、Linux/Cygwin/Windows で共有します。
+vim 環境を、Linux/Mac/Cygwin(Windows) で共有します。
 
 下記を前提としています。
  - Linux および Cygwin はコンソール版の vim を利用する
