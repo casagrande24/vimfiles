@@ -7,5 +7,7 @@ set shiftwidth=2
 set tabstop=2
 "  <Tab> や <BS> を打ち込んだときにカーソルが動く幅。
 set softtabstop=2
+" switch と case は同じ深さ。
+set cinoptions+=:0
 
 " vim:filetype=vim

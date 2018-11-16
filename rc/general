@@ -76,8 +76,8 @@ vnoremap * "zy:let @/ = @z<CR>n
 " バッファが放棄されるときに隠れ状態にする。
 set hidden
 " Ctrl+J/K でバッファ切り替え
-nmap <C-j> :bp<CR>
-nmap <C-k> :bn<CR>
+nmap <C-j> :bn<CR>
+nmap <C-k> :bp<CR>
 " PageUp/Down でもバッファ切り替え
 nmap <PageUp> :bp<CR>
 nmap <PageDown> :bn<CR>
