@@ -45,6 +45,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'tpope/vim-surround'
 " highlight access log
 Plugin 'vim-scripts/httplog'
+" vim-easy-align
+Plugin 'junegunn/vim-easy-align'
 
 call vundle#end()
 "----------------------------------------------------------------------------
