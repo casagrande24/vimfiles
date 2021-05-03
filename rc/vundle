@@ -47,6 +47,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/httplog'
 " vim-easy-align
 Plugin 'junegunn/vim-easy-align'
+" Improved AnsiEsc.vim
+Plugin 'powerman/vim-plugin-AnsiEsc'
 
 call vundle#end()
 "----------------------------------------------------------------------------
