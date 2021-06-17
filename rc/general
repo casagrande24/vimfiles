@@ -73,6 +73,18 @@ vnoremap <C-A> <C-A>gv
 vnoremap <C-X> <C-X>gv
 " Visual モードで選択中の文字列で * 検索可能に。
 vnoremap * "zy:let @/ = @z<CR>n
+
+" 行の移動
+" https://vim.fandom.com/wiki/Moving_lines_up_or_down
+" Meta key とのコンビネーションは Ctrl-V で入力
+" ^[j = Meta+j / ^[k = Meta+k
+nnoremap j :m .+1<CR>==
+nnoremap k :m .-2<CR>==
+inoremap j <Esc>:m .+1<CR>==gi
+inoremap k <Esc>:m .-2<CR>==gi
+vnoremap j :m '>+1<CR>gv=gv
+vnoremap k :m '<-2<CR>gv=gv
+
 "----------------------------------------------------------------------------
 " バッファ管理関連
 "----------------------------------------------------------------------------
