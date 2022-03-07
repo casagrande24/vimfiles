@@ -7,7 +7,7 @@
 ## CSV形式文字列の整形
 
 1. 範囲選択
-2. g a * ,
+2. ga * ,
 
 
 # Improved AnsiEsc.vimo
@@ -22,3 +22,8 @@ ANSI エスケープシーケンスを表示する。
 
 :AnsiEsc
 
+
+# JumpToLastOccurrence
+https://www.vim.org/scripts/script.php?script_id=3386
+
+,f{char}  行の末尾から文字を探す

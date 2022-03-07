@@ -49,6 +49,10 @@ Plugin 'vim-scripts/httplog'
 Plugin 'junegunn/vim-easy-align'
 " Improved AnsiEsc.vim
 Plugin 'powerman/vim-plugin-AnsiEsc'
+" JumpToLastOccurrence
+Plugin 'ingo-library'
+Plugin 'repeat.vim'
+Plugin 'JumpToLastOccurrence'
 
 call vundle#end()
 "----------------------------------------------------------------------------
