@@ -13,10 +13,15 @@ set lines=80
 " ツールバーを無効にする。
 set guioptions-=T
 " 選択時、Windows のクリップボードを使う。
-set guioptions+=a
+"set guioptions+=a
 " ヘルプ閲覧時に使う
 set mouse=h
 "set mouse=nvh
+
+" MacVim において Cmd+C でコピーできるようにする。
+" https://groups.google.com/g/vim_mac/c/3dkCXMBe-o0/m/r4lQtJZGBQAJ
+nnoremenu Edit.Copy :<C-Y><Esc>
+inoremenu Edit.Copy <C-O>:<C-Y><Esc>"
 
 " カラースキームを設定
 "colorscheme elflord
